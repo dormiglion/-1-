@@ -4,7 +4,7 @@ import time
 
 WIDTH = 1000
 HEIGHT = 800
-DT = 0.05 #delay time between frames
+DT = 0.05 #модельное время одного шага
 
 
 def dist(p1, p2):
@@ -176,13 +176,13 @@ def main(N, M):
         pygame.display.update()
         # pygame.time.delay(0)
 
-    end = time.time()
-    return steps 
+    # end = time.time()
+    return steps*DT
     
     
 NN = [1, 2, 3, 4, 5]
 MM = [5, 10, 15]
-REPEATS = 3
+REPEATS = 15
 
 # создаём файл с заголовком ("w" — перезаписать)
 with open("results.csv", "w", encoding="utf-8") as f:
